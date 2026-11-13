@@ -163,7 +163,20 @@
   document.getElementById('year').textContent = new Date().getFullYear();
   document.getElementById('enquiryForm').addEventListener('submit', function(e){
     e.preventDefault();
-    document.getElementById('formHint').textContent = 'Thank you! This is currently a design preview. The form needs to be connected to your WhatsApp or email before the website goes live.';
+    const data = new FormData(e.currentTarget);
+    const message = [
+      'Hello Tute You, I would like to enquire about admissions.',
+      'Student name: ' + (data.get('student') || ''),
+      'Parent/guardian name: ' + (data.get('parent') || ''),
+      'Class: ' + (data.get('class') || ''),
+      'Phone: ' + (data.get('phone') || ''),
+      'Message: ' + (data.get('message') || '')
+    ].join('\n');
+    const whatsappUrl = 'https://wa.me/919629550813?text=' + encodeURIComponent(message);
+    const whatsappWindow = window.open(whatsappUrl, '_blank');
+    document.getElementById('formHint').textContent = whatsappWindow
+      ? 'Your enquiry details are ready in WhatsApp. Please press Send to deliver them to Tute You.'
+      : 'Please allow pop-ups for this website, then submit the form again. You can also use the WhatsApp Us button.';
     document.getElementById('formHint').style.color = '#1c7a59';
   });
 </script>
