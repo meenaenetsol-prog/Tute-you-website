@@ -3,162 +3,130 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Tute You Learning Academy in Pallikaranai. Supportive tuition for Classes 6–10 and Science for Classes 11–12.">
-  <title>Tute You | Learn with Confidence</title>
+  <meta name="description" content="Tute You Learning Academy in Pallikaranai, Chennai. Tuition for Classes 6–10 all subjects and Classes 11–12 Physics, Chemistry and Biology. Online and offline classes.">
+  <title>Tute You Learning Academy | Learn, Explore, Shine</title>
   <style>
-    :root{--navy:#142b4a;--blue:#2864dc;--sky:#eaf2ff;--ink:#243247;--muted:#65748b;--gold:#ffbf5b;--white:#fff;--line:#e6ebf2}
-    *{box-sizing:border-box} html{scroll-behavior:smooth}
-    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.6}
-    a{text-decoration:none;color:inherit}.container{width:min(1120px,92%);margin:auto}
-    header{position:sticky;top:0;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);z-index:10}
+    :root{--ink:#20284a;--muted:#66708b;--purple:#6654dc;--pink:#ff6f91;--yellow:#ffc857;--mint:#56c7ae;--sky:#65b9f4;--paper:#fffdf9;--line:#eeeaf5}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:Nunito,"Segoe UI",system-ui,-apple-system,sans-serif;line-height:1.65}
+    a{text-decoration:none;color:inherit}.container{width:min(1140px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,253,249,.94);backdrop-filter:blur(14px);border-bottom:1px solid #eeeaf5}
     .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-    .brand{display:flex;align-items:center;gap:11px;font-weight:850;color:var(--navy);font-size:1.2rem;letter-spacing:-.5px}
-    .logo{width:42px;height:42px;border-radius:13px;background:linear-gradient(145deg,#2864dc,#6fa3ff);display:grid;place-items:center;color:white;font-weight:900;box-shadow:0 8px 18px #2864dc35}
-    .navlinks{display:flex;gap:27px;align-items:center;font-size:.93rem;color:#526176;font-weight:650}
-    .navlinks a:hover{color:var(--blue)}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;border-radius:12px;background:var(--blue);color:#fff;font-weight:750;border:0;cursor:pointer;box-shadow:0 8px 18px #2864dc28}
-    .btn:hover{background:#1d52c0;transform:translateY(-1px)}.btn-light{background:#fff;color:var(--navy);box-shadow:none;border:1px solid var(--line)}
-    .menu{display:none;background:none;border:0;font-size:1.6rem;color:var(--navy)}
-    .hero{background:radial-gradient(circle at 85% 20%,#dceaff 0,transparent 28%),linear-gradient(120deg,#f5f8ff,#fff 62%);padding:82px 0 76px;overflow:hidden}
-    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:55px}
-    .eyebrow{display:inline-flex;align-items:center;gap:8px;background:#e8f0ff;color:#2459c4;padding:7px 13px;border-radius:99px;font-size:.82rem;font-weight:800}
-    h1{font-size:clamp(2.5rem,5vw,4.35rem);line-height:1.08;letter-spacing:-2px;color:var(--navy);margin:20px 0}
-    h1 span{color:var(--blue)}.hero p{font-size:1.1rem;color:var(--muted);max-width:560px;margin-bottom:27px}
-    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}.trust{display:flex;gap:22px;flex-wrap:wrap;margin-top:34px;color:#607087;font-size:.88rem;font-weight:650}
-    .trust span:before{content:"✓";color:#21966c;font-weight:900;margin-right:7px}
-    .visual{min-height:370px;position:relative;display:grid;place-items:center}
-    .visual-card{width:min(390px,100%);background:#fff;border:1px solid #e7edf8;border-radius:28px;padding:28px;box-shadow:0 24px 70px #1e47731a;transform:rotate(2deg)}
-    .visual-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}
-    .visual-top strong{color:var(--navy);font-size:1.08rem}.pill{background:#fff3dd;color:#99600b;border-radius:99px;padding:5px 10px;font-size:.75rem;font-weight:800}
-    .learning-art{height:155px;border-radius:20px;background:linear-gradient(135deg,#e8f1ff,#f3f7ff);display:flex;align-items:center;justify-content:center;gap:17px;margin-bottom:22px}
-    .book{width:82px;height:105px;border-radius:9px 14px 14px 9px;background:linear-gradient(135deg,#2864dc,#74a2f7);box-shadow:7px 8px 0 #c5d9ff;transform:rotate(-8deg);display:grid;place-items:center;color:white;font-size:2rem}
-    .pencil{font-size:3.5rem;transform:rotate(28deg)}.progress-label{display:flex;justify-content:space-between;font-size:.82rem;font-weight:750;color:#526176}
-    .progress{height:9px;background:#edf1f7;border-radius:99px;margin-top:9px;overflow:hidden}.progress i{display:block;width:78%;height:100%;background:linear-gradient(90deg,#2864dc,#78a6ff);border-radius:99px}
-    .float{position:absolute;background:#fff;padding:13px 17px;border-radius:15px;box-shadow:0 12px 35px #1d3f6c1c;font-weight:800;color:var(--navy)}
-    .float.one{top:35px;right:0}.float.two{bottom:28px;left:0}.float small{display:block;color:var(--muted);font-weight:600;font-size:.72rem}
-    section{padding:78px 0}.section-head{text-align:center;max-width:650px;margin:0 auto 40px}.kicker{color:var(--blue);font-size:.8rem;font-weight:850;text-transform:uppercase;letter-spacing:1.5px}
-    h2{font-size:clamp(1.9rem,3vw,2.7rem);line-height:1.2;color:var(--navy);letter-spacing:-1px;margin:10px 0 12px}
-    .section-head p{color:var(--muted);margin:0}
-    .courses{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
-    .course{border:1px solid var(--line);border-radius:22px;padding:28px;background:#fff;transition:.2s}
-    .course:hover{transform:translateY(-4px);box-shadow:0 16px 35px #173b6810}
-    .course-icon{width:52px;height:52px;border-radius:16px;background:var(--sky);display:grid;place-items:center;font-size:1.5rem;margin-bottom:18px}
-    .course h3{color:var(--navy);font-size:1.3rem;margin:0 0 8px}.course p{color:var(--muted);margin:0 0 17px}
-    .tags{display:flex;flex-wrap:wrap;gap:8px}.tag{font-size:.8rem;font-weight:700;color:#315ca8;background:#f0f5ff;padding:6px 10px;border-radius:8px}
-    .about{background:#f7f9fd}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
-    .about-panel{background:linear-gradient(145deg,#17365c,#2864dc);border-radius:25px;padding:32px;color:#fff;min-height:285px;display:flex;flex-direction:column;justify-content:space-between}
-    .about-panel .big{font-size:3.5rem;font-weight:900;line-height:1}.about-panel p{color:#e0eaff;max-width:300px}
-    .about-copy p{color:var(--muted)}.benefits{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px}
-    .benefit{background:#fff;border:1px solid var(--line);border-radius:13px;padding:13px;font-weight:750;color:var(--navy);font-size:.9rem}
-    .benefit span{color:#21966c;margin-right:7px}
-    .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .why{padding:23px;border:1px solid var(--line);border-radius:18px}.why .emoji{font-size:1.6rem}.why h3{color:var(--navy);margin:12px 0 6px}.why p{color:var(--muted);font-size:.93rem;margin:0}
-    .admission{background:linear-gradient(120deg,#edf4ff,#f8fbff)}
-    .admission-box{display:grid;grid-template-columns:.9fr 1.1fr;gap:45px;align-items:start}
-    .admission-copy p{color:var(--muted)}.contact-note{background:#fff;border:1px solid #dce7fa;border-radius:15px;padding:16px;margin-top:22px;color:#53647b;font-size:.9rem}
-    form{background:#fff;padding:27px;border:1px solid var(--line);border-radius:22px;box-shadow:0 15px 40px #173b680d}
-    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}
-    label{font-size:.85rem;font-weight:750;color:var(--navy)}input,select,textarea{font:inherit;padding:12px 13px;border:1px solid #dce3ed;border-radius:10px;outline:none;width:100%;color:var(--ink);background:#fff}
-    input:focus,select:focus,textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px #2864dc18}textarea{min-height:90px;resize:vertical}
-    .form-hint{font-size:.78rem;color:#7b8798;margin:12px 0 0}
-    .contact-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.whatsapp-float{position:fixed;right:22px;bottom:22px;z-index:20;background:#168b55;color:#fff;padding:13px 18px;border-radius:999px;font-weight:800;box-shadow:0 10px 28px #123b2c35}
-.whatsapp-float:hover{background:#117747}
-.schedule-note{display:inline-flex;margin-top:14px;padding:8px 12px;background:#eaf2ff;border-radius:10px;color:#2459c4;font-weight:750;font-size:.9rem}.contact-card{border:1px solid var(--line);border-radius:17px;padding:20px}.contact-card b{display:block;color:var(--navy);margin:8px 0 3px}.contact-card span{color:var(--muted);font-size:.9rem}
-    footer{background:#122945;color:#dce7f8;padding:30px 0}.footer-row{display:flex;justify-content:space-between;gap:20px;align-items:center}.footer-brand{font-weight:850;color:#fff}.footer-small{font-size:.82rem;color:#b8c7dc}
-    @media(max-width:800px){.navlinks{display:none;position:absolute;top:76px;left:0;right:0;background:#fff;padding:20px 4%;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.navlinks.open{display:flex}.menu{display:block}.nav>.btn{display:none}.hero-grid,.about-grid,.admission-box{grid-template-columns:1fr}.hero{padding:60px 0}.visual{min-height:330px}.courses{grid-template-columns:1fr}.why-grid{grid-template-columns:1fr 1fr}.contact-row{grid-template-columns:1fr}.about-grid{gap:25px}}
-    @media(max-width:520px){section{padding:58px 0}.why-grid,.benefits,.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.hero-actions .btn{width:100%}.float.one{right:-4px}.float.two{left:-4px}.footer-row{flex-direction:column;align-items:flex-start}}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:950;font-size:1.22rem;letter-spacing:-.5px}
+    .logo{width:43px;height:43px;border-radius:15px;background:linear-gradient(135deg,var(--purple),#9b7cf5);display:grid;place-items:center;color:white;font-size:1.35rem;box-shadow:0 8px 18px #6654dc35}
+    .brand small{display:block;font-size:.62rem;letter-spacing:1.5px;color:#8b86a6;font-weight:900;line-height:1.2}
+    .navlinks{display:flex;align-items:center;gap:25px;color:#646b85;font-size:.92rem;font-weight:800}
+    .navlinks a:hover{color:var(--purple)}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 21px;border:0;border-radius:14px;background:var(--purple);color:#fff;font-weight:900;cursor:pointer;box-shadow:0 9px 20px #6654dc30;transition:.2s}
+    .btn:hover{transform:translateY(-2px);background:#5140c5}.btn-pink{background:var(--pink);box-shadow:0 9px 20px #ff6f9130}.btn-pink:hover{background:#ed557a}.btn-outline{background:#fff;color:var(--ink);border:1px solid #e9e4f3;box-shadow:none}
+    .menu{display:none;border:0;background:none;font-size:1.7rem;color:var(--ink)}
+    .hero{position:relative;overflow:hidden;padding:76px 0 86px;background:linear-gradient(120deg,#fff5ef 0%,#fff9ec 48%,#f4f1ff 100%)}
+    .hero:before,.hero:after{content:"";position:absolute;border-radius:50%;pointer-events:none}.hero:before{width:260px;height:260px;background:#ffe0e8;right:-90px;top:-100px}.hero:after{width:180px;height:180px;background:#d8f5ed;left:-90px;bottom:-90px}
+    .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:48px}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:99px;background:#fff;color:#7459c8;font-size:.83rem;font-weight:950;box-shadow:0 5px 18px #5c4aa510}
+    h1{font-size:clamp(2.6rem,5vw,4.55rem);line-height:1.06;letter-spacing:-2.5px;margin:20px 0 17px;font-weight:1000}
+    h1 .colour{color:var(--purple)}h1 .pink{color:var(--pink)}
+    .hero-copy>p{font-size:1.1rem;color:var(--muted);max-width:550px;margin:0 0 26px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}.quick-points{display:flex;gap:17px;flex-wrap:wrap;margin-top:28px;color:#656d87;font-weight:800;font-size:.88rem}.quick-points span:before{content:"✓";display:inline-grid;place-items:center;width:19px;height:19px;margin-right:7px;border-radius:50%;background:#ddf6ed;color:#219879;font-size:.75rem}
+    .hero-art{position:relative;min-height:390px;display:grid;place-items:center}
+    .art-card{width:min(440px,100%);background:#fff;border-radius:32px;padding:22px;box-shadow:0 24px 65px #4a39751c;transform:rotate(1.5deg);border:1px solid #fff}
+    .art-top{display:flex;justify-content:space-between;align-items:center;font-weight:950;font-size:.92rem}.sticker{background:#fff2c9;color:#986700;padding:5px 11px;border-radius:99px;font-size:.73rem}
+    .scene{height:245px;position:relative;overflow:hidden;margin-top:15px;border-radius:24px;background:linear-gradient(145deg,#e8e3ff,#e5f8f3 65%,#fff0d6)}
+    .sun{position:absolute;width:75px;height:75px;border-radius:50%;background:#ffd36d;right:45px;top:28px}
+    .cloud{position:absolute;background:white;border-radius:40px;width:75px;height:24px;top:65px;left:35px}.cloud:before,.cloud:after{content:"";position:absolute;background:white;border-radius:50%}.cloud:before{width:30px;height:30px;left:12px;top:-13px}.cloud:after{width:38px;height:38px;right:10px;top:-18px}
+    .book1,.book2{position:absolute;bottom:33px;border-radius:8px 12px 12px 8px;box-shadow:5px 6px 0 #c6b9f3}.book1{left:82px;width:90px;height:112px;background:#7764df;transform:rotate(-9deg)}.book2{left:154px;width:94px;height:96px;background:#ff819d;transform:rotate(8deg);box-shadow:5px 6px 0 #ffc2ce}
+    .book1:after,.book2:after{content:"";position:absolute;inset:12px;border:2px solid #ffffff90;border-radius:5px}
+    .pencil-art{position:absolute;right:77px;bottom:38px;font-size:4.5rem;transform:rotate(25deg)}
+    .spark{position:absolute;color:#fff;font-size:1.8rem}.spark.s1{top:23px;left:47%}.spark.s2{right:25px;bottom:33px;color:#8b78e8}
+    .art-caption{display:flex;align-items:center;justify-content:space-between;margin-top:17px;font-size:.82rem;font-weight:900;color:#666b85}.dots{display:flex;gap:5px}.dots i{width:8px;height:8px;border-radius:50%;background:#e2def3}.dots i:first-child{background:var(--pink)}
+    .bubble{position:absolute;background:#fff;border-radius:16px;padding:12px 16px;box-shadow:0 12px 30px #51447a20;font-weight:950;font-size:.87rem}.bubble small{display:block;color:#8b8da2;font-size:.7rem;font-weight:750}.bubble.a{top:30px;right:-2px}.bubble.b{bottom:22px;left:-15px}
+    section{padding:78px 0}.section-head{text-align:center;max-width:700px;margin:0 auto 38px}.kicker{font-size:.78rem;letter-spacing:1.7px;text-transform:uppercase;font-weight:1000;color:var(--pink)}h2{font-size:clamp(2rem,3.5vw,2.8rem);letter-spacing:-1.3px;line-height:1.16;margin:9px 0 12px;font-weight:1000}.section-head p{color:var(--muted);margin:0}
+    .course-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.course{position:relative;overflow:hidden;border-radius:26px;padding:29px;background:#fff;border:1px solid var(--line);box-shadow:0 12px 35px #4a397509}.course:after{content:"";position:absolute;width:130px;height:130px;border-radius:50%;right:-45px;top:-48px;background:#f2efff}.course.pink:after{background:#fff0f3}
+    .course-icon{position:relative;z-index:1;width:58px;height:58px;border-radius:18px;display:grid;place-items:center;font-size:1.75rem;background:#eeeaff}.course.pink .course-icon{background:#ffedf1}
+    .course h3{font-size:1.45rem;margin:17px 0 7px}.course p{color:var(--muted);margin:0 0 17px}.tags{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 23px}.tag{padding:6px 11px;border-radius:9px;background:#f1efff;color:#6252bd;font-size:.79rem;font-weight:900}.pink .tag{background:#fff0f3;color:#c64d6b}
+    .course-foot{font-weight:900;color:#454c6b;margin-bottom:17px}.course .btn{font-size:.9rem}
+    .mode-strip{margin:25px auto 0;max-width:850px;padding:17px 22px;border-radius:17px;background:#e9f8f3;text-align:center;color:#267d69;font-weight:900}
+    .steps-section{background:#f7f5ff}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step{background:#fff;padding:24px;border-radius:20px;border:1px solid #eeeaf8}.step-no{width:38px;height:38px;border-radius:13px;background:#eeeaff;color:var(--purple);display:grid;place-items:center;font-weight:1000}.step:nth-child(2) .step-no{background:#fff0f3;color:#dc5e7b}.step:nth-child(3) .step-no{background:#e6f8f2;color:#259b7c}.step h3{margin:13px 0 5px}.step p{margin:0;color:var(--muted);font-size:.92rem}
+    .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center}.about-art{min-height:300px;border-radius:28px;background:linear-gradient(135deg,#6654dc,#a58cf5);padding:30px;color:#fff;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}.about-art:after{content:"✦";position:absolute;font-size:13rem;right:5px;bottom:-75px;color:#ffffff22}.about-art .big{font-size:3.1rem;font-weight:1000;line-height:1.03;position:relative;z-index:1}.about-art p{max-width:290px;color:#eeeaff;position:relative;z-index:1}.about-copy p{color:var(--muted)}.benefits{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:20px}.benefit{padding:12px;border-radius:13px;background:#fff8e9;font-weight:900;font-size:.88rem}.benefit:nth-child(2){background:#eff9f6}.benefit:nth-child(3){background:#f3f0ff}.benefit:nth-child(4){background:#fff0f3}
+    .admission{background:linear-gradient(130deg,#fff1f4,#fff8e9 55%,#f0efff)}.admission-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:38px;align-items:start}.admission-copy p{color:var(--muted)}.info-box{margin-top:22px;background:#fff;border:1px solid #f1e9ee;border-radius:17px;padding:17px;color:#626a83;font-size:.92rem}.info-box strong{color:var(--ink)}
+    form{background:#fff;border-radius:25px;padding:27px;border:1px solid #eeeaf5;box-shadow:0 18px 45px #51447a12}.form-title{font-size:1.2rem;font-weight:1000;margin-bottom:17px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}label{font-size:.84rem;font-weight:900}input,select,textarea{font:inherit;padding:12px 13px;border:1px solid #e5e2ed;border-radius:11px;outline:none;width:100%;color:var(--ink);background:#fff}input:focus,select:focus,textarea:focus{border-color:var(--purple);box-shadow:0 0 0 3px #6654dc18}textarea{min-height:88px;resize:vertical}.form-hint{font-size:.78rem;color:#777d91;margin:12px 0 0}
+    .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.contact-card{border:1px solid var(--line);border-radius:19px;padding:21px;background:#fff}.contact-card .ico{font-size:1.5rem}.contact-card strong{display:block;margin:8px 0 3px}.contact-card span{color:var(--muted);font-size:.9rem;overflow-wrap:anywhere}
+    footer{background:#25234d;color:#fff;padding:28px 0}.footer-row{display:flex;justify-content:space-between;align-items:center;gap:20px}.footer-brand{font-weight:1000}.footer-small{color:#d0cde8;font-size:.82rem}
+    .whatsapp{position:fixed;right:20px;bottom:20px;z-index:30;background:#159b68;color:#fff;border-radius:99px;padding:13px 18px;font-weight:1000;box-shadow:0 10px 28px #123b2c35}.whatsapp:hover{background:#107c53}
+    @media(max-width:820px){.navlinks{display:none;position:absolute;top:76px;left:0;right:0;background:#fff;padding:18px 4%;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.navlinks.open{display:flex}.menu{display:block}.nav>.btn{display:none}.hero-grid,.about-grid,.admission-grid{grid-template-columns:1fr}.hero{padding:55px 0 65px}.hero-art{min-height:350px}.steps{grid-template-columns:1fr}.about-grid{gap:25px}}
+    @media(max-width:560px){section{padding:58px 0}.course-grid,.contact-grid,.form-grid,.benefits{grid-template-columns:1fr}.field.full{grid-column:auto}.hero-actions .btn{width:100%}.bubble.a{right:-5px}.bubble.b{left:-5px}.footer-row{align-items:flex-start;flex-direction:column}.art-card{padding:15px}.scene{height:215px}.book1{left:48px}.book2{left:118px}.pencil-art{right:43px}}
   </style>
 </head>
 <body>
-<header>
-  <div class="container nav">
-    <a class="brand" href="#home"><span class="logo">T</span><span>Tute You<small style="display:block;font-size:.67rem;color:#71809a;letter-spacing:1.2px;font-weight:800">LEARNING ACADEMY</small></span></a>
-    <nav class="navlinks" id="navlinks"><a href="#home">Home</a><a href="#courses">Courses</a><a href="#about">About Us</a><a href="#why">Why Tute You</a><a href="#contact">Contact</a></nav>
-    <a class="btn" href="#admissions">Enquire Now</a>
-    <button class="menu" aria-label="Open menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
-  </div>
-</header>
+<header><div class="container nav">
+  <a class="brand" href="#home"><span class="logo">✦</span><span>Tute You<small>LEARNING ACADEMY</small></span></a>
+  <nav class="navlinks" id="navlinks"><a href="#home">Home</a><a href="#courses">Courses</a><a href="#about">About</a><a href="#admissions">Admissions</a><a href="#contact">Contact</a></nav>
+  <a class="btn btn-pink" href="#admissions">Enquire Now <span>→</span></a>
+  <button class="menu" aria-label="Open menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+</div></header>
 <main>
-  <section class="hero" id="home">
-    <div class="container hero-grid">
-      <div>
-        <span class="eyebrow">✦ A brighter way to learn</span>
-        <h1>Learn with confidence.<br><span>Grow with Tute You.</span></h1>
-        <p>Clear concepts, caring guidance and a supportive learning environment to help every student take the next step with confidence.</p>
-        <div class="hero-actions"><a class="btn" href="#courses">Explore Courses&nbsp; →</a><a class="btn btn-light" href="#admissions">Join Tute You</a></div>
-        <div class="trust"><span>Concept-focused learning</span><span>Supportive guidance</span></div>
-<div class="schedule-note">🕓 Classes: 4:00 PM – 8:00 PM</div>
-      </div>
-      <div class="visual" aria-label="Learning illustration">
-        <div class="visual-card">
-          <div class="visual-top"><strong>Your learning journey</strong><span class="pill">Keep growing ✨</span></div>
-          <div class="learning-art"><div class="book">✦</div><div class="pencil">✏️</div></div>
-          <div class="progress-label"><span>Small steps, big progress</span><span>78%</span></div><div class="progress"><i></i></div>
-        </div>
-        <div class="float one">📚 Learn every day<small>Build strong foundations</small></div>
-        <div class="float two">🌟 Believe. Learn. Achieve.<small>Your potential matters</small></div>
-      </div>
+<section class="hero" id="home"><div class="container hero-grid">
+  <div class="hero-copy">
+    <span class="eyebrow">🌈 A happy place to learn and grow</span>
+    <h1>Big dreams start with <span class="colour">small steps.</span> <span class="pink">Let's learn!</span></h1>
+    <p>At Tute You, students learn with clear explanations, regular practice and caring guidance. Let's make every school day a little more confident.</p>
+    <div class="actions"><a class="btn" href="#courses">Explore our courses <span>→</span></a><a class="btn btn-outline" href="#admissions">Ask about admission</a></div>
+    <div class="quick-points"><span>Classes 6–12</span><span>Online & offline</span><span>Friendly guidance</span></div>
+  </div>
+  <div class="hero-art" aria-label="Colourful illustration of books and learning supplies">
+    <div class="art-card"><div class="art-top"><span>Ready, set, learn!</span><span class="sticker">✨ YOU CAN DO IT</span></div>
+      <div class="scene"><div class="sun"></div><div class="cloud"></div><span class="spark s1">✦</span><span class="spark s2">✧</span><div class="book1"></div><div class="book2"></div><div class="pencil-art">✏️</div></div>
+      <div class="art-caption"><span>Learn something new every day</span><span class="dots"><i></i><i></i><i></i></span></div>
     </div>
-  </section>
+    <div class="bubble a">📚 Strong basics<small>Build your confidence</small></div><div class="bubble b">🌟 Every learner can shine<small>One step at a time</small></div>
+  </div>
+</div></section>
 
-  <section id="courses">
-    <div class="container">
-      <div class="section-head"><span class="kicker">Our Courses</span><h2>The right support for every stage</h2><p>Structured academic support designed around school learning and stronger subject understanding.</p></div>
-      <div class="courses">
-        <article class="course"><div class="course-icon">📘</div><h3>Classes 6–10</h3><p>Guidance across all school subjects, with a focus on clear explanations, regular practice and strong fundamentals.</p><div class="tags"><span class="tag">All Subjects</span><span class="tag">Concept Clarity</span><span class="tag">Practice & Revision</span></div></article>
-        <article class="course"><div class="course-icon">🔬</div><h3>Classes 11–12</h3><p>Focused science subject support to help students understand important concepts and prepare with confidence.</p><div class="tags"><span class="tag">Physics</span><span class="tag">Chemistry</span><span class="tag">Biology</span></div></article>
-      </div>
-    </div>
-  </section>
+<section id="courses"><div class="container">
+  <div class="section-head"><span class="kicker">Find your learning path</span><h2>Courses for Classes 6 to 12</h2><p>Clear course details help parents choose the right support for their child.</p></div>
+  <div class="course-grid">
+    <article class="course"><div class="course-icon">📘</div><h3>Classes 6–10</h3><p>All-subject tuition to strengthen school fundamentals and help students stay confident with their lessons.</p>
+      <div class="tags"><span class="tag">All school subjects</span><span class="tag">Concept clarity</span><span class="tag">Homework support</span><span class="tag">Revision & practice</span></div>
+      <div class="course-foot">Build strong foundations for the future.</div><a class="btn" href="#admissions">Enquire for Classes 6–10 →</a>
+    </article>
+    <article class="course pink"><div class="course-icon">🔬</div><h3>Classes 11–12 · Science</h3><p>Subject-focused support to help higher-secondary students understand key concepts and practise with purpose.</p>
+      <div class="tags"><span class="tag">Physics</span><span class="tag">Chemistry</span><span class="tag">Biology</span><span class="tag">Concept practice</span><span class="tag">Revision support</span></div>
+      <div class="course-foot">Learn science step by step.</div><a class="btn btn-pink" href="#admissions">Enquire for Classes 11–12 →</a>
+    </article>
+  </div>
+  <div class="mode-strip">🕓 Class timings: 4:00 PM – 8:00 PM &nbsp; | &nbsp; 💻 Online and offline learning options</div>
+</div></section>
 
-  <section class="about" id="about">
-    <div class="container about-grid">
-      <div class="about-panel"><div><span style="font-size:.8rem;letter-spacing:1.5px;font-weight:800;color:#cfe0ff">WELCOME TO TUTE YOU</span><div class="big">Learn.<br>Improve.<br>Shine.</div></div><p>Every student learns differently. We believe in patient teaching, steady progress and building confidence one lesson at a time.</p></div>
-      <div class="about-copy"><span class="kicker">About Us</span><h2>A supportive space to do your best</h2><p>Tute You is a learning academy planned to help school students strengthen their understanding, practise regularly and feel more confident in their studies.</p><p>Our aim is simple: make learning clear, encouraging and meaningful for every student.</p><div class="benefits"><div class="benefit"><span>✓</span>Simple explanations</div><div class="benefit"><span>✓</span>Individual attention</div><div class="benefit"><span>✓</span>Regular practice</div><div class="benefit"><span>✓</span>Positive learning</div></div></div>
-    </div>
-  </section>
+<section class="steps-section"><div class="container"><div class="section-head"><span class="kicker">Simple admission process</span><h2>Getting started is easy</h2><p>Three simple steps to help your child begin their learning journey with Tute You.</p></div>
+  <div class="steps"><article class="step"><div class="step-no">1</div><h3>Send an enquiry</h3><p>Share your child's name, class and contact details through the enquiry form.</p></article><article class="step"><div class="step-no">2</div><h3>Talk with us</h3><p>We'll connect through WhatsApp to understand the learning support you need.</p></article><article class="step"><div class="step-no">3</div><h3>Choose your class</h3><p>Discuss the suitable course and online or offline learning option.</p></article></div>
+</div></section>
 
-  <section id="why">
-    <div class="container">
-      <div class="section-head"><span class="kicker">Why Choose Us</span><h2>Learning that builds confidence</h2><p>A good learning journey is about more than marks. It is about understanding, consistency and confidence.</p></div>
-      <div class="why-grid">
-        <article class="why"><div class="emoji">💡</div><h3>Clear explanations</h3><p>Understand the concepts step by step instead of simply memorising answers.</p></article>
-        <article class="why"><div class="emoji">🤝</div><h3>Supportive guidance</h3><p>A welcoming learning environment where students can ask questions freely.</p></article>
-        <article class="why"><div class="emoji">📝</div><h3>Practice with purpose</h3><p>Build confidence through revision, exercises and consistent learning habits.</p></article>
-      </div>
-    </div>
-  </section>
+<section id="about"><div class="container about-grid">
+  <div class="about-art"><div><div style="font-size:.78rem;letter-spacing:1.5px;font-weight:1000;color:#e9e3ff">WELCOME TO TUTE YOU</div><div class="big">Learn.<br>Explore.<br>Shine.</div></div><p>Every student has their own pace. We believe in patient teaching, steady progress and confidence through understanding.</p></div>
+  <div class="about-copy"><span class="kicker">A little about us</span><h2>A supportive space for growing minds</h2><p>Tute You is a learning academy in Pallikaranai, Chennai, planned to help school students strengthen their understanding, practise regularly and feel more confident in their studies.</p><p>Our aim is simple: make learning clear, encouraging and meaningful for every student.</p>
+    <div class="benefits"><div class="benefit">💡 Simple explanations</div><div class="benefit">🤝 Supportive guidance</div><div class="benefit">📝 Regular practice</div><div class="benefit">🌱 Positive learning</div></div>
+  </div>
+</div></section>
 
-  <section class="admission" id="admissions">
-    <div class="container admission-box">
-      <div class="admission-copy"><span class="kicker">Admissions & Enquiries</span><h2>Let's take the next step together.</h2><p>Interested in joining Tute You? Share a few details and we can help you with course and admission information.</p><div class="contact-note">📌 <strong>Location:</strong> Pallikaranai, Chennai<br>🕓 <strong>Class timings:</strong> 4:00 PM – 8:00 PM<br>📚 <strong>Teaching mode:</strong> Online and offline</div></div>
-      <form id="enquiryForm">
-        <div class="form-grid">
-          <div class="field"><label for="student">Student name</label><input id="student" name="student" placeholder="Enter student name" required></div>
-          <div class="field"><label for="parent">Parent / guardian name</label><input id="parent" name="parent" placeholder="Enter parent name"></div>
-          <div class="field"><label for="class">Class</label><select id="class" name="class" required><option value="">Select class</option><option>Class 6</option><option>Class 7</option><option>Class 8</option><option>Class 9</option><option>Class 10</option><option>Class 11</option><option>Class 12</option></select></div>
-          <div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" placeholder="Enter contact number" required></div>
-          <div class="field full"><label for="message">Message (optional)</label><textarea id="message" name="message" placeholder="Tell us what support you are looking for"></textarea></div>
-          <div class="field full"><button class="btn" type="submit">Submit Enquiry&nbsp; →</button></div>
-        </div>
-        <p class="form-hint" id="formHint">Enquiry form preview. We will connect it to WhatsApp or email before publishing so submissions reach you.</p>
-      </form>
-    </div>
-  </section>
+<section class="admission" id="admissions"><div class="container admission-grid">
+  <div class="admission-copy"><span class="kicker">Admissions & enquiries</span><h2>Let's find the right class for your child.</h2><p>Have questions about subjects, timings or learning mode? Send us an enquiry. We'll be happy to help.</p>
+    <div class="info-box">📍 <strong>Location:</strong> Pallikaranai, Chennai<br>🕓 <strong>Timings:</strong> 4:00 PM – 8:00 PM<br>📚 <strong>Courses:</strong> Classes 6–10 all subjects; Classes 11–12 Physics, Chemistry and Biology<br>💻 <strong>Mode:</strong> Online and offline</div>
+  </div>
+  <form id="enquiryForm"><div class="form-title">✉️ Student enquiry form</div><div class="form-grid">
+    <div class="field"><label for="student">Student name *</label><input id="student" name="student" placeholder="Enter student name" required></div>
+    <div class="field"><label for="parent">Parent / guardian name</label><input id="parent" name="parent" placeholder="Enter parent name"></div>
+    <div class="field"><label for="class">Student's class *</label><select id="class" name="class" required><option value="">Select class</option><option>Class 6</option><option>Class 7</option><option>Class 8</option><option>Class 9</option><option>Class 10</option><option>Class 11</option><option>Class 12</option></select></div>
+    <div class="field"><label for="phone">Parent's phone number *</label><input id="phone" name="phone" type="tel" placeholder="Enter contact number" required></div>
+    <div class="field full"><label for="message">Your question (optional)</label><textarea id="message" name="message" placeholder="Tell us what you would like to know"></textarea></div>
+    <div class="field full"><button class="btn btn-pink" type="submit">Send enquiry on WhatsApp →</button></div>
+  </div><p class="form-hint" id="formHint">WhatsApp will open with your details filled in. Please press Send in WhatsApp to share your enquiry with us.</p></form>
+</div></section>
 
-  <section id="contact">
-    <div class="container">
-      <div class="section-head"><span class="kicker">Get in Touch</span><h2>We'd love to hear from you</h2><p>Contact Tute You to know more about classes and admissions.</p></div>
-      <div class="contact-row">
-        <div class="contact-card">📍<b>Location</b><span>Pallikaranai, Chennai, Tamil Nadu</span></div>
-        <div class="contact-card">📞<b>Phone / WhatsApp</b><span><a href="https://wa.me/919629550813" target="_blank" rel="noopener">+91 96295 50813</a></span></div>
-<div class="contact-card">✉️<b>Email</b><span><a href="mailto:meena.enetsol@gmail.com">meena.enetsol@gmail.com</a></span></div>
-      </div>
-    </div>
-  </section>
+<section id="contact"><div class="container"><div class="section-head"><span class="kicker">We're here to help</span><h2>Contact Tute You</h2><p>Reach out to know more about courses and admissions.</p></div>
+  <div class="contact-grid"><div class="contact-card"><div class="ico">📍</div><strong>Visit / Location</strong><span>Pallikaranai, Chennai, Tamil Nadu</span></div><div class="contact-card"><div class="ico">💬</div><strong>Phone / WhatsApp</strong><span><a href="https://wa.me/919629550813" target="_blank" rel="noopener">+91 96295 50813</a></span></div><div class="contact-card"><div class="ico">✉️</div><strong>Email</strong><span><a href="mailto:meena.enetsol@gmail.com">meena.enetsol@gmail.com</a></span></div></div>
+</div></section>
 </main>
-<a class="whatsapp-float" href="https://wa.me/919629550813?text=Hello%20Tute%20You%2C%20I%20would%20like%20to%20know%20about%20admissions." target="_blank" rel="noopener" aria-label="Chat with Tute You on WhatsApp">☏ WhatsApp Us</a>
-<footer><div class="container footer-row"><div><div class="footer-brand">Tute You – Learning Academy</div><div class="footer-small">Learn with confidence. Grow with Tute You.</div></div><div class="footer-small">© <span id="year"></span> Tute You. All rights reserved.</div></div></footer>
+<a class="whatsapp" href="https://wa.me/919629550813?text=Hello%20Tute%20You%2C%20I%20would%20like%20to%20know%20about%20admissions." target="_blank" rel="noopener" aria-label="Chat with Tute You on WhatsApp">☏ WhatsApp Us</a>
+<footer><div class="container footer-row"><div><div class="footer-brand">Tute You Learning Academy</div><div class="footer-small">Learn. Explore. Shine.</div></div><div class="footer-small">© <span id="year"></span> Tute You. All rights reserved.</div></div></footer>
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
   document.getElementById('enquiryForm').addEventListener('submit', function(e){
@@ -171,13 +139,13 @@
       'Class: ' + (data.get('class') || ''),
       'Phone: ' + (data.get('phone') || ''),
       'Message: ' + (data.get('message') || '')
-    ].join('\n');
+    ].join('\\n');
     const whatsappUrl = 'https://wa.me/919629550813?text=' + encodeURIComponent(message);
     const whatsappWindow = window.open(whatsappUrl, '_blank');
     document.getElementById('formHint').textContent = whatsappWindow
       ? 'Your enquiry details are ready in WhatsApp. Please press Send to deliver them to Tute You.'
       : 'Please allow pop-ups for this website, then submit the form again. You can also use the WhatsApp Us button.';
-    document.getElementById('formHint').style.color = '#1c7a59';
+    document.getElementById('formHint').style.color = '#218765';
   });
 </script>
 </body>
