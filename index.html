@@ -60,7 +60,10 @@
     label{font-size:.85rem;font-weight:750;color:var(--navy)}input,select,textarea{font:inherit;padding:12px 13px;border:1px solid #dce3ed;border-radius:10px;outline:none;width:100%;color:var(--ink);background:#fff}
     input:focus,select:focus,textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px #2864dc18}textarea{min-height:90px;resize:vertical}
     .form-hint{font-size:.78rem;color:#7b8798;margin:12px 0 0}
-    .contact-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.contact-card{border:1px solid var(--line);border-radius:17px;padding:20px}.contact-card b{display:block;color:var(--navy);margin:8px 0 3px}.contact-card span{color:var(--muted);font-size:.9rem}
+    .contact-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.whatsapp-float{position:fixed;right:22px;bottom:22px;z-index:20;background:#168b55;color:#fff;padding:13px 18px;border-radius:999px;font-weight:800;box-shadow:0 10px 28px #123b2c35}
+.whatsapp-float:hover{background:#117747}
+.schedule-note{display:inline-flex;margin-top:14px;padding:8px 12px;background:#eaf2ff;border-radius:10px;color:#2459c4;font-weight:750;font-size:.9rem}.contact-card{border:1px solid var(--line);border-radius:17px;padding:20px}.contact-card b{display:block;color:var(--navy);margin:8px 0 3px}.contact-card span{color:var(--muted);font-size:.9rem}
     footer{background:#122945;color:#dce7f8;padding:30px 0}.footer-row{display:flex;justify-content:space-between;gap:20px;align-items:center}.footer-brand{font-weight:850;color:#fff}.footer-small{font-size:.82rem;color:#b8c7dc}
     @media(max-width:800px){.navlinks{display:none;position:absolute;top:76px;left:0;right:0;background:#fff;padding:20px 4%;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.navlinks.open{display:flex}.menu{display:block}.nav>.btn{display:none}.hero-grid,.about-grid,.admission-box{grid-template-columns:1fr}.hero{padding:60px 0}.visual{min-height:330px}.courses{grid-template-columns:1fr}.why-grid{grid-template-columns:1fr 1fr}.contact-row{grid-template-columns:1fr}.about-grid{gap:25px}}
     @media(max-width:520px){section{padding:58px 0}.why-grid,.benefits,.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.hero-actions .btn{width:100%}.float.one{right:-4px}.float.two{left:-4px}.footer-row{flex-direction:column;align-items:flex-start}}
@@ -84,6 +87,7 @@
         <p>Clear concepts, caring guidance and a supportive learning environment to help every student take the next step with confidence.</p>
         <div class="hero-actions"><a class="btn" href="#courses">Explore Courses&nbsp; →</a><a class="btn btn-light" href="#admissions">Join Tute You</a></div>
         <div class="trust"><span>Concept-focused learning</span><span>Supportive guidance</span></div>
+<div class="schedule-note">🕓 Classes: 4:00 PM – 8:00 PM</div>
       </div>
       <div class="visual" aria-label="Learning illustration">
         <div class="visual-card">
@@ -127,7 +131,7 @@
 
   <section class="admission" id="admissions">
     <div class="container admission-box">
-      <div class="admission-copy"><span class="kicker">Admissions & Enquiries</span><h2>Let's take the next step together.</h2><p>Interested in joining Tute You? Share a few details and we can help you with course and admission information.</p><div class="contact-note">📌 <strong>Location:</strong> Pallikaranai, Chennai<br><small>Exact address and contact details will be added after confirmation.</small></div></div>
+      <div class="admission-copy"><span class="kicker">Admissions & Enquiries</span><h2>Let's take the next step together.</h2><p>Interested in joining Tute You? Share a few details and we can help you with course and admission information.</p><div class="contact-note">📌 <strong>Location:</strong> Pallikaranai, Chennai<br>🕓 <strong>Class timings:</strong> 4:00 PM – 8:00 PM<br>📚 <strong>Teaching mode:</strong> Online and offline</div></div>
       <form id="enquiryForm">
         <div class="form-grid">
           <div class="field"><label for="student">Student name</label><input id="student" name="student" placeholder="Enter student name" required></div>
@@ -147,12 +151,13 @@
       <div class="section-head"><span class="kicker">Get in Touch</span><h2>We'd love to hear from you</h2><p>Contact Tute You to know more about classes and admissions.</p></div>
       <div class="contact-row">
         <div class="contact-card">📍<b>Location</b><span>Pallikaranai, Chennai, Tamil Nadu</span></div>
-        <div class="contact-card">📞<b>Phone / WhatsApp</b><span>Contact number to be added</span></div>
-        <div class="contact-card">✉️<b>Email</b><span>Email address to be added</span></div>
+        <div class="contact-card">📞<b>Phone / WhatsApp</b><span><a href="https://wa.me/919629550813" target="_blank" rel="noopener">+91 96295 50813</a></span></div>
+<div class="contact-card">✉️<b>Email</b><span><a href="mailto:meena.enetsol@gmail.com">meena.enetsol@gmail.com</a></span></div>
       </div>
     </div>
   </section>
 </main>
+<a class="whatsapp-float" href="https://wa.me/919629550813?text=Hello%20Tute%20You%2C%20I%20would%20like%20to%20know%20about%20admissions." target="_blank" rel="noopener" aria-label="Chat with Tute You on WhatsApp">☏ WhatsApp Us</a>
 <footer><div class="container footer-row"><div><div class="footer-brand">Tute You – Learning Academy</div><div class="footer-small">Learn with confidence. Grow with Tute You.</div></div><div class="footer-small">© <span id="year"></span> Tute You. All rights reserved.</div></div></footer>
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
