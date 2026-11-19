@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://meenaenetsol-prog.github.io/Tute-you-website/sitemap.xml
